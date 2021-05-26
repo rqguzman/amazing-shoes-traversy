@@ -1,4 +1,4 @@
-# NAME OF THE PROJECT
+# AMAZING SHOES
 
 <p>
     This is an educational project provided by Kevin Powell, from </br>
@@ -24,7 +24,7 @@
 <p>
     <img src="https://github.com/rqguzman/assets/blob/main/ColoredBadges/svg/dev/languages/html.svg" alt="HTML" style="vertical-align:top margin:6px 4px">
     <img src="https://github.com/rqguzman/assets/blob/main/ColoredBadges/svg/dev/languages/css3.svg" alt="CSS3" style="vertical-align:top margin:6px 4px">    
-    <img src="https://github.com/rqguzman/assets/blob/main/ColoredBadges/svg/dev/languages/saas.svg" alt="SAAS" style="vertical-align:top margin:6px 4px">    
+    <img src="https://github.com/rqguzman/assets/blob/main/ColoredBadges/svg/dev/languages/sass.svg" alt="SAAS" style="vertical-align:top margin:6px 4px">    
 </p>
 
 ### BUILT WITH  
