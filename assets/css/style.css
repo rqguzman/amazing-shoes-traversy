@@ -29,6 +29,28 @@ p {
   margin: 0 auto;
 }
 
+/* 
+  .class > * + * stands for: 
+  + * : Any element placed immediately after
+  > * : Any element that's a child of
+
+  Any element placed immediately after any 
+  element that's a child of '.spacing'
+
+  Or, put differently: 
+  Any element that's an adjacent sibling of
+  a direct child of .spacing
+
+  so, if you are a direct child of .spacing
+  AND 
+  you don't have a sibling which comes before you: do nothing;
+  OR
+  you do have a sibling which comes before you: add a margin-top;
+ */
+.spacing > * + * {
+  margin-top: var(--spacer, 2rem);
+}
+
 .btn {
   display: inline-block;
   border-radius: 0.25rem;
@@ -51,4 +73,20 @@ p {
   font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
   line-height: 1;
   text-transform: uppercase;
+}
+
+.hero {
+  padding: 15rem 0;
+  background: #222;
+  text-align: center;
+  color: #fff;
+}
+@supports (background-blend-mode: multiply) {
+  .hero {
+    background: url(../img/shoe-3.png), radial-gradient(#444, #111);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 }
