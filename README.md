@@ -1,8 +1,8 @@
 # AMAZING SHOES
 
 <p>
-    This is an educational project provided by Kevin Powell, from </br>
-    Traversy Media(https://www.traversymedia.com/) </br>
+    This is an educational project provided by Kevin Powell, with </br>
+    Traversy Media(https://www.traversymedia.com/). </br>
     A landing page for a mock sneakers' store</br>
 </p>
 <p>
@@ -12,6 +12,9 @@
     Status: :construction: ongoing </br>
     Demo: :construction: comming soon
 </p>
+
+### SNAPSHOTS
+:construction: comming soon
 
 ### MOBILE SNAPSHOTS
 :construction: comming soon

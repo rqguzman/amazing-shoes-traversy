@@ -24,10 +24,25 @@ p {
   margin: 0;
 }
 
+section {
+  padding: 7rem 0;
+}
+
 .container {
   width: 85%;
   max-width: 65rem;
   margin: 0 auto;
+}
+
+.split {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  & > * {
+    flex-basis: 30%;
+    min-width: 15rem;
+  }
 }
 
 /* 
@@ -78,6 +93,11 @@ p {
 }
 
 .section-title {
+  margin-bottom: 5rem;
+  text-align: center;
+  font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+  line-height: 1;
+  color: #17353d;
 }
 
 .hero {
@@ -92,5 +112,50 @@ p {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
+  }
+}
+
+// FEATURE ITEMS
+.featured {
+  background: #eee;
+  &__item {
+    position: relative;
+    display: block;
+    transform: scale(.85);
+    transition: transform 250ms ease-in-out;
+    text-align: center;
+    line-height: 1.2;
+    text-decoration: none;
+    color: #333;
+   
+    &:hover,
+    &:focus {
+      transform: scale(1);
+      .featured__details {
+        opacity: 1;
+        text-shadow: 0 0 2em rgba(#fff, 1);
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      z-index: -1;
+      border-radius: 50%;
+      /* paddings in % are based on the width of its parent */
+      /* https://css-tricks.com/oh-hey-padding-percentage-is-based-on-the-parent-elements-width/ */
+      padding: 75% 75% 0 0;
+      background: #2193b0;
+    }
+  }
+  &__details {
+    opacity: 0;
+    transition: opacity 250ms linear;
+    span {
+      display: block;
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
   }
 }
