@@ -155,3 +155,17 @@ section {
   font-weight: 700;
   font-size: 2.5rem;
 }
+
+.product {
+  background: radial-gradient(var(--clr-inner, limegreen), var(--clr-outer, purple));
+  margin-bottom: 3rem;
+  padding: 3rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.product__title {
+  font-size: 4rem;
+  line-height: 1.1;
+  color: #fff;
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
+}
