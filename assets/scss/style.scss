@@ -67,113 +67,137 @@ section {
   margin-top: var(--spacer, 2rem);
 }
 
-.btn {
-  display: inline-block;
-  border-radius: 0.25rem;
-  padding: 0.5rem 1.25rem;
-  background: var(--clr-accent, blue);
-  color: var(--clr-text, #fff);
-  font-weight: 700;
-  font-size: 1.125rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: transform 250ms ease-in-out, opacity 250ms linear;
-  &:hover,
-  &:focus {
-    transform: scale(1.1);
-    opacity: 0.9;
-  }
-}
-
-.primary-title {
-  font-size: 4rem;
-  font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-.section-title {
-  margin-bottom: 5rem;
-  text-align: center;
-  font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
-  line-height: 1;
-  color: #17353d;
-}
-
-.hero {
-  padding: 15rem 0;
-  background: #222; // if browser not compatible w/ blend-mode.
-  text-align: center;
-  color: #fff;
-  @supports (background-blend-mode: multiply) {
-    // if browser is compatible.
-    background: url(../img/shoe-3.png), radial-gradient(#444, #111);
-    background-blend-mode: multiply;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-}
-
-// FEATURE ITEMS
-.featured {
-  background: #eee;
-  &__item {
-    position: relative;
-    display: block;
-    transform: scale(0.85);
-    transition: transform 250ms ease-in-out;
-    text-align: center;
-    line-height: 1.2;
+// HERO
+  .btn {
+    display: inline-block;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1.25rem;
+    background: var(--clr-accent, blue);
+    color: var(--clr-text, #fff);
+    font-weight: 700;
+    font-size: 1.125rem;
+    text-transform: uppercase;
     text-decoration: none;
-    color: #333;
-
+    transition: transform 250ms ease-in-out, opacity 250ms linear;
     &:hover,
     &:focus {
-      transform: scale(1);
-      .featured__details {
-        opacity: 1;
-        text-shadow: 0 0 2em rgba(#fff, 1);
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+  }
+
+  .primary-title {
+    font-size: 4rem;
+    font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .section-title {
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+    line-height: 1;
+    color: #17353d;
+  }
+
+  .hero {
+    padding: 15rem 0;
+    background: #222; // if browser not compatible w/ blend-mode.
+    text-align: center;
+    color: #fff;
+    @supports (background-blend-mode: multiply) {
+      // if browser is compatible.
+      background: url(../img/shoe-3.png), radial-gradient(#444, #111);
+      background-blend-mode: multiply;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+
+// FEATURE ITEMS
+  .featured {
+    background: #eee;
+    &__item {
+      position: relative;
+      display: block;
+      transform: scale(0.85);
+      transition: transform 250ms ease-in-out;
+      text-align: center;
+      line-height: 1.2;
+      text-decoration: none;
+      color: #333;
+
+      &:hover,
+      &:focus {
+        transform: scale(1);
+        .featured__details {
+          opacity: 1;
+          text-shadow: 0 0 2em rgba(#fff, 1);
+        }
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        z-index: -1;
+        border-radius: 50%;
+        /* paddings in % are based on the width of its parent */
+        /* https://css-tricks.com/oh-hey-padding-percentage-is-based-on-the-parent-elements-width/ */
+        padding: 75% 75% 0 0;
+        background: #2193b0;
       }
     }
-    &::after {
-      content: '';
-      position: absolute;
-      top: 10%;
-      left: 10%;
-      z-index: -1;
-      border-radius: 50%;
-      /* paddings in % are based on the width of its parent */
-      /* https://css-tricks.com/oh-hey-padding-percentage-is-based-on-the-parent-elements-width/ */
-      padding: 75% 75% 0 0;
-      background: #2193b0;
+    &__details {
+      opacity: 0;
+      transition: opacity 250ms linear;
+      span {
+        display: block;
+        font-weight: 700;
+        font-size: 2.5rem;
+      }
     }
   }
-  &__details {
-    opacity: 0;
-    transition: opacity 250ms linear;
-    span {
-      display: block;
-      font-weight: 700;
-      font-size: 2.5rem;
-    }
-  }
-}
 
 // PRODUCT
-.product {
-  background: radial-gradient(
-    var(--clr-inner, limegreen),
-    var(--clr-outer, purple)
-  );
-  margin-bottom: 3rem;
-  padding: 3rem;
-  border-radius: 1rem;
-  text-align: center;
-  &__title {
-    font-size: 4rem;
-    line-height: 1.1;
-    color: #fff;
-    text-shadow: 0 0 .2em rgba(#000, .2);
+  .product {
+    background: radial-gradient(
+      var(--clr-inner, limegreen),
+      var(--clr-outer, purple)
+    );
+    margin-bottom: 3rem;
+    padding: 3rem;
+    border-radius: 1rem;
+    text-align: center;
+    &__title {
+      font-size: 4rem;
+      line-height: 1.1;
+      color: #fff;
+      text-shadow: 0 0 .2em rgba(#000, .2);
+    }
   }
-}
+
+// CUSTOM PROPERTIES
+  .hero {
+    --clr-accent:#faa700;
+  }
+
+  .shoe-red {
+    --clr-inner: #faa700;
+    --clr-outer: #e48d00;
+    --clr-accent: #a1173c;
+  }
+
+  .shoe-white {
+    --clr-inner: #fce4b3;
+    --clr-outer: #eac886;
+    --clr-accent: #2f4858;
+  }
+
+  .shoe-blue {
+    --clr-inner: #6dd5ed;
+    --clr-outer: #2193b0;
+    --clr-accent: #008951;
+  }
