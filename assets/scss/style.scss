@@ -167,15 +167,43 @@ section {
       var(--clr-inner, limegreen),
       var(--clr-outer, purple)
     );
-    margin-bottom: 3rem;
-    padding: 3rem;
-    border-radius: 1rem;
+    margin-bottom: 5em;
+    padding: 3em;
+    border-radius: 1em;
     text-align: center;
     &__title {
       font-size: 4rem;
-      line-height: 1.1;
+      text-transform: uppercase;
+      line-height: 1;
       color: #fff;
       text-shadow: 0 0 .2em rgba(#000, .2);
+    }
+    &__image {
+      margin: -5em 0 0 0;
+
+    }
+    @media (min-width: 45em) {
+      text-align: left;
+      margin-bottom: 9em;
+      &__title {
+        font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
+        margin: 0;
+      }
+      &__image {
+        float:right;
+        width: 65%;
+        shape-outside: url(../img/shoe-1.png);
+        shape-margin: 1em;
+        margin: 0 -5em 0 0;
+      }
+      &.shoe--left {
+        .product__image {
+          float: left;
+          shape-outside: url('../img/shoe-2.png');
+          margin: 0 0 0 -5em;
+          shape-margin: 2em;
+        }
+      }
     }
   }
 
